@@ -47,4 +47,17 @@ def busqueda_binaria(array, llave):
             alto = medio - 1
 
     return -1
+#funcion para decifrar
+def decifrar_clave(llave, lista_organizada):
+    lista_organizada = ordenar_mezlca(lista_organizada)
+    clave_decifrada = ""
 
+    for digit in llave:
+        index = busqueda_binaria(lista_organizada, int(digit))
+
+        if index != -1:
+            clave_decifrada += str(index)
+        else:
+            clave_decifrada += digit
+
+    return clave_decifrada
