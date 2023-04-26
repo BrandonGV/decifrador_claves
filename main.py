@@ -31,3 +31,20 @@ def ordenar_mezlca(array):
             k += 1
 
     return array
+#busqueda binaria
+def busqueda_binaria(array, llave):
+    abajo = 0
+    alto = len(array) - 1
+
+    while abajo <= alto:
+        medio = (abajo + alto) // 2
+
+        if array[medio] == llave:
+            return medio
+        elif array[medio] < llave:
+            abajo = medio + 1
+        else:
+            alto = medio - 1
+
+    return -1
+
