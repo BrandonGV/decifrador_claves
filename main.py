@@ -61,3 +61,12 @@ def decifrar_clave(llave, lista_organizada):
             clave_decifrada += digit
 
     return clave_decifrada
+#union de las funciones para dar el resultado
+lista_organizada = [5, 2, 8, 1, 9, 0, 3, 7, 4, 6]
+llave=[]
+for x in range(4):
+    valor=int(input("ingresa el valor:"))
+    llave.append (valor)
+print(llave)
+clave_decifrada = decifrar_clave(llave, lista_organizada)
+print("Clave decifrada:", clave_decifrada)
